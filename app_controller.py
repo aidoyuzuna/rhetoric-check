@@ -72,7 +72,13 @@ class AppController:
 
         self._enable_buttons()
         self.page.update()
-        winsound.PlaySound("fin.wav", winsound.SND_FILENAME)
+
+        try:
+            winsound.PlaySound("fin.wav", winsound.SND_FILENAME)
+
+        except FileNotFoundError:
+            print("エラー: ファイル「fin.wav」が見つかりません")
+        return None
 
     def on_clear_click(self, e):
         """テキストエリアリセット
