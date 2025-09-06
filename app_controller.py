@@ -64,7 +64,7 @@ class AppController:
 
         # 返答・表示処理
 
-        send_text = f"以下の投稿から「論理破綻・詭弁・認知のゆがみ」を見つけてください。/n投稿内容：{self.input_box.value}"
+        send_text = f"以下の投稿から「論理破綻・詭弁・認知のゆがみ」を見つけてください。\n投稿内容：{self.input_box.value}"
 
         chatgpt_result, claude_result = self.ai_service.get_responses(send_text)
 
