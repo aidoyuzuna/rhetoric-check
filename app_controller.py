@@ -55,8 +55,7 @@ class AppController:
             e: イベントオブジェクト
         """
         # 回答中の処理を行う
-        self.submit_button.disabled = True
-        self.clear_button.disabled = True
+        self._disable_buttons()
 
         self.chatgpt_response.value = "回答中"
         self.claude_response.value = "回答中"
@@ -71,8 +70,7 @@ class AppController:
         self.chatgpt_response.value = chatgpt_result
         self.claude_response.value = claude_result
 
-        self.submit_button.disabled = False
-        self.clear_button.disabled = False
+        self._enable_buttons()
         self.page.update()
         winsound.PlaySound("fin.wav", winsound.SND_FILENAME)
 
