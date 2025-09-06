@@ -39,4 +39,3 @@ class AIService:
             chatgpt_response_message.output_text,
             claude_response_message.content[0].text,
         )
-        pass

@@ -48,8 +48,6 @@ class AppController:
         if k.key == "Enter" and k.ctrl:
             self.send_click("")
 
-        pass
-
     def send_click(self, e):
         """テキストエリア送信
 
@@ -78,8 +76,6 @@ class AppController:
         self.page.update()
         winsound.PlaySound("fin.wav", winsound.SND_FILENAME)
 
-        pass
-
     def on_clear_click(self, e):
         """テキストエリアリセット
 
@@ -92,18 +88,15 @@ class AppController:
         self.input_box.update()
         self.chatgpt_response.update()
         self.claude_response.update()
-        pass
 
     def _disable_buttons(self):
         """ボタンを無効化"""
         self.submit_button.disabled = True
         self.clear_button.disabled = True
         self.page.update()
-        pass
 
     def _enable_buttons(self):
         """ボタンを有効化"""
         self.submit_button.disabled = False
         self.clear_button.disabled = False
         self.page.update()
-        pass
